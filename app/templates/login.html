@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<script type="text/javascript">
+
+  /*  $(function() {
+    	$('#usernameSigin').change(function() {
+    		$.getJSON($SCRIPT_ROOT + '/check_username', {
+				username: $('input[name="username"]').val()
+			}, function(data) {
+				if (data.result == "true"){
+					alert("CORRECT")
+					$('#hola').text("Correct!");
+					$('#emailSigin').prop('disabled', false);
+				}
+
+				else { 
+					$(function(){
+						$('#usernameSiginError').text(data.result);
+						$("#emailSigin").prop('disabled', true);
+					});
+				}
+      		});
+    	});
+
+    	$("#emailSigin").change(function() {
+    		$.getJSON($SCRIPT_ROOT + '/check_email', {
+				email: $('input[name="email"]').val()
+			}, function(data) {
+				if (data.result == "true"){
+					$('#emailSiginError').text("Correct!");
+					$("#passwordSigin").prop('disabled', false);
+					$("#password2Sigin").prop('disabled', false);
+				}
+
+				else { 
+					$(function(){
+						$('#emailSiginError').text(data.result);
+						$("#passwordSigin").prop('disabled', true);
+						$("#password2Sigin").prop('disabled', true);
+					});
+				}
+      		});
+    	});
+
+
+  	});*/
+</script>
+
+
+
+
+<table>
+
+	<td>
+
+		<tr>
+			<h1> Login </h1>
+
+			<form action="/login" method="post" name="login">
+				{{ logInForm.hidden_tag() }}
+
+				<p>
+
+					E-mail: {{ logInForm.emailLogin }}<br>
+
+        				{% for error in logInForm.errors.email %}
+        					<span style="color: red;">[{{error}}]</span>
+        				{% endfor %}<br>
+
+					Password: {{ logInForm.passwordLogin }}
+
+        				{% for error in logInForm.errors.password %}
+        					<span style="color: red;">[{{error}}]</span>
+        				{% endfor %}<br>					
+
+				</p>
+				<div>
+					{{ msg }}
+				</div>
+
+				<p><input type="submit" value="Login"></p>
+
+			</form>
+
+		</tr>
+
+		<tr>
+			<h1> Sign in </h1>
+
+			<form action="/new_user" method="post" name="singin">
+				{{ sigInForm.hidden_tag() }}
+
+				<p>
+					Username: {{ sigInForm.usernameSigin }} 
+						<span id="hola" style="color: red;"></span>
+					    {% for error in sigInForm.errors.usernameSigin %}
+        					<script type="text/javascript">$('#hola').text("{{ error }}");</script>
+        				{% endfor %}<br>	
+
+					E-mail: {{ sigInForm.emailSigin }}
+
+        				{% for error in sigInForm.errors.emailSigin %}
+        					<span id="emailSiginError" style="color: red;">{{error}}</span>
+        				{% endfor %}<br>	
+
+					Password: {{ sigInForm.passwordSigin }}
+
+        				{% for error in sigInForm.errors.passwordSigin %}
+        					<span id="passSiginError" style="color: red;">{{error}}</span>
+        				{% endfor %}<br>	
+
+					Repeat password: {{ sigInForm.password2Sigin }}
+
+        				{% for error in sigInForm.errors.password2Sigin %}
+        					<span id="pass2SiginError" style="color: red;">{{error}}</span>
+        				{% endfor %}<br>						
+				</p>
+
+				<p><input type="submit" value="Register"></p>
+
+			</form>
+
+		</tr>
+
+	</td>
+
+<a href="/test_users">click</a>
+
+
+{% endblock %}

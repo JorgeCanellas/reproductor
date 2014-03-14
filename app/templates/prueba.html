@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<script type="text/javascript">
+
+    $(function() {
+    	$("#pruebaId").change(function() {
+    		alert("si");
+    		$.getJSON($SCRIPT_ROOT + '/prueba_comprobar', {
+
+				email: $('input[name="email"]').val()
+			}, function(data) {
+				alert(data.result);
+        		//$("#result").text(data.result);
+      		});
+    	});
+  	});
+
+</script>
+
+<form action="" method="post" name="login">
+				{{ pruebaForm.hidden_tag() }}
+
+				<p>
+
+					E-mail: {{ pruebaForm.email }}<br>
+
+       
+					Password: {{ pruebaForm.nombre }}
+
+       
+				</p>
+
+				<p><input type="submit" value="Login"></p>
+</form>
+
+
+<button type='button' id='submitBtn' name='submitBtn'>Submit via AJAX</button><br /><br />
+
+{% endblock %}
