@@ -9,7 +9,6 @@ from app import app
 #--------------------------------------------------------------------------------------------------------
 @app.route('/')
 @app.route('/index')
-@app.route('/importfilm')
 #@login_required
 def index():
     return "Mundooo bonitoooo"  # , user=user, monkeys_list=monkeys_list)
