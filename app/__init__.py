@@ -20,5 +20,6 @@ login_manager.login_view = 'login'
 login_manager.init_app(app)
 
 
-
-from app import views, models
+from app import view, models
+from app.models import *
+from app.views import importFilm

@@ -4,15 +4,14 @@ from flask.ext.login import login_required
 from app import app
 
 
-
 #--------------------------------------------------------------------------------------------------------
 # INDEX: Main page of the monkey already connected
 #--------------------------------------------------------------------------------------------------------
-
 @app.route('/')
 @app.route('/index')
-@login_required
+@app.route('/importfilm')
+#@login_required
 def index():
-    return render_template('index.html', user=user, monkeys_list=monkeys_list)
+    return "Mundooo bonitoooo"  # , user=user, monkeys_list=monkeys_list)
 
 
