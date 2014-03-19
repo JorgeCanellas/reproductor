@@ -1,5 +1,5 @@
 __author__ = 'jorge'
-from sqlalchemy import Column
+from sqlalchemy import Column, Integer, String
 from app import db
 
 
