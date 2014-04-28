@@ -11,6 +11,6 @@ from app import app
 @app.route('/index')
 #@login_required
 def index():
-    return "Mundooo bonitoooo"  # , user=user, monkeys_list=monkeys_list)
+    return render_template("index.html")    # , user=user, monkeys_list=monkeys_list)
 
 

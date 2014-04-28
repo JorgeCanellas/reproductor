@@ -1,24 +1,51 @@
-<html>
-	<head>
-		<title> Zoo </title>
-		
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="Width=device-width, initial-scale=1">
 
-		<script type=text/javascript>
-  			$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
-		</script>
-		
-	</head>
 
-	<body>
+    <title> home </title>
 
-		<a href="/index">Index</a> | <a href="/logout">Logout</a>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet"/>
 
-		<hr>
 
-		{% block content %} {% endblock %}
+    {#<script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>#}
 
-	</body>
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"> Jauloon </a>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    {% block content %} {% endblock %}
+
+    <hr>
+
+    <footer>
+        <p>Alvaro & Jorge 2014</p>
+    </footer>
+</div><!-- /.container -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
 </html>

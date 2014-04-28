@@ -22,4 +22,4 @@ login_manager.init_app(app)
 
 from app import view, models
 from app.models import *
-from app.views import importFilm
+from app.views import films

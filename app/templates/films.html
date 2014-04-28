@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <div class="jumbotron">
+                <h1>Films</h1>
+
+                <p>Here some information about films </p>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Film title</h2>
+
+                    <p> Synopsis</p>
+
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <!--/span-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/span-->
+
+{#        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">#}
+        <div class=" col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#lA" data-toggle="tab">basic</a></li>
+                    <li><a href="#lB" data-toggle="tab">optional</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="lA">
+                        <p>I'm in Section A.</p>
+                        <input type="text" class="form-control" placeholder="title">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-film"></span> file
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="link">
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="lB">
+                        <p>Howdy, I'm in Section B.</p>
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button class="btn btn-defaultdropdown-toggle" data-toggle="dropdown" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Categoria 1</a></li>
+                                    <li><a href="#">Categoria 2</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">add genre</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="genre">
+                        </div>
+                        <input type="text" class="form-control" placeholder="runtime">
+                        <div class="input-group">
+                             <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </button>
+                            </span>
+
+                            <input type="text" class="form-control" placeholder="release date">
+                        </div>
+                        <input type="text" class="form-control" placeholder="director">
+                        <input type="text" class="form-control" placeholder="cast">
+                        <textarea class="form-control" rows="3" placeholder="storyline"></textarea>
+{#                            <input type="text" class="form-control" placeholder="storyline">#}
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="rating">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="languages">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="age limit">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group-btn">
+                     <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-transfer"></span> load from IMDB
+                    </button>
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-hdd"></span> save
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+{% endblock %}

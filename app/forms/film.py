@@ -1,7 +1,5 @@
 from app.models.direction import direction
 from app.models.filmGenre import film_genre
-
-__author__ = 'jorge'
 from flask.ext.wtf import Form
 from wtforms import TextField, PasswordField, SelectField
 from wtforms.validators import Required, EqualTo, Email
